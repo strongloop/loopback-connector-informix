@@ -1,0 +1,45 @@
+{
+  "name": "loopback-connector-informix",
+  "version": "0.0.1",
+  "description": "LoopBack Connector for IBM Informix",
+  "keywords": [
+    "IBM",
+    "StrongLoop",
+    "LoopBack",
+    "Informix",
+    "DataSource",
+    "Connector"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint ./ && jscs ./",
+    "lint": "eslint ./ && jscs ./",
+    "test": "mocha --timeout 5000"
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "debug": "^2.2.0",
+    "ibm_db": "^0.0.19",
+    "loopback-connector": "^2.3.0"
+  },
+  "devDependencies": {
+    "jscs": "^2.8.0",
+    "eslint": "^1.10.3",
+    "eslint-config-strongloop": "^1.0.2",
+    "loopback-datasource-juggler": "^2.43.0",
+    "mocha": "^2.3.4",
+    "rc": "^1.1.5",
+    "should": "^8.1.1",
+    "sinon": "^1.17.2",
+    "bluebird": "^2.9.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strongloop/loopback-connector-informix.git"
+  },
+  "homepage": "https://github.com/strongloop/loopback-connector-informix",
+  "bugs": {
+    "url": "https://github.com/strongloop/loopback-connector-informix/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}
