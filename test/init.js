@@ -6,11 +6,11 @@ var config = {
   username: process.env.INFORMIX_USERNAME,
   password: process.env.INFORMIX_PASSWORD,
   hostname: process.env.INFORMIX_HOSTNAME || 'localhost',
-  port: process.env.INFORMIX_PORTNUM || 60000,
+  port: process.env.INFORMIX_PORTNUM || 40000,
   database: process.env.INFORMIX_DATABASE || 'testdb',
-  schema: process.env.INFORMIX_SCHEMA || 'STRONGLOOP',
-  supportColumnStore: process.env.INFORMIX_USECOLUMNSTORE || false,
-  supportDashDB: process.env.INFORMIX_SUPPORT_DASHDB || false,
+  protocol: process.env.INFORMIX_PROTOCOL || 'TCPIP',
+  servername: process.env.INFORMIX_SERVER || 'test_server',
+  driver: process.env.INFORMIX_DRIVER || 'INFORMIX 3.51 64 BIT',
 };
 
 global.config = config;
