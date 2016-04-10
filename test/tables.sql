@@ -1,30 +1,29 @@
-SET CURRENT SCHEMA = CURRENT USER;
+-- SET CURRENT SCHEMA = CURRENT USER;
 
 DROP TABLE LOCALUSER1;
 DROP TABLE LOCALUSER2;
 DROP TABLE LOCALUSER3;
 
-  CREATE TABLE "LOCALUSER1"
-   (    "ID" VARCHAR(20) NOT NULL,
-        "USERNAME" VARCHAR(250)
-   );
+CREATE TABLE LOCALUSER1
+(    ID VARCHAR(20) NOT NULL,
+     USERNAME VARCHAR(250)
+);
 
-  CREATE TABLE "LOCALUSER2"
-   (    "ID" VARCHAR(20) NOT NULL,
-        "USERNAME" VARCHAR(250)
-   );
+CREATE TABLE LOCALUSER2
+(    ID VARCHAR(20) NOT NULL,
+     USERNAME VARCHAR(250)
+);
 
-  CREATE TABLE "LOCALUSER3"
-   (    "ID" VARCHAR(20) NOT NULL,
-        "USERNAME" VARCHAR(250)
-   );
+CREATE TABLE LOCALUSER3
+(    ID VARCHAR(20) NOT NULL,
+     USERNAME VARCHAR(250)
+);
 
-SET CURRENT SCHEMA = STRONGLOOP;
+-- SET CURRENT SCHEMA = STRONGLOOP;
 
 --------------------------------------------------------
 --  File created - Thursday-September-05-2013
 --------------------------------------------------------
-DROP TABLE LOCALUSER;
 DROP TABLE CUSTOMER;
 DROP TABLE SESSION;
 DROP TABLE LOCATION;
@@ -36,33 +35,33 @@ DROP TABLE RESERVATION;
 --  DDL for Table CUSTOMER
 --------------------------------------------------------
 
-  CREATE TABLE "CUSTOMER"
-   (	"ID" VARCHAR(20) NOT NULL,
-	"USERNAME" VARCHAR(1024),
-	"EMAIL" VARCHAR(1024),
-	"PASSWORD" VARCHAR(1024),
-	"NAME" VARCHAR(40),
-	"MILITARY_AGENCY" VARCHAR(20),
-	"REALM" VARCHAR(1024),
-	"EMAILVERIFIED" CHAR(1),
-	"VERIFICATIONTOKEN" VARCHAR(1024),
-	"CREDENTIALS" VARCHAR(1024),
-	"CHALLENGES" VARCHAR(1024),
-	"STATUS" VARCHAR(1024),
-	"CREATED" DATE,
-	"LASTUPDATED" DATE
+  CREATE TABLE CUSTOMER
+   (	ID VARCHAR(20) NOT NULL,
+	USERNAME LVARCHAR(1024),
+	EMAIL LVARCHAR(1024),
+	PASSWORD LVARCHAR(1024),
+	NAME VARCHAR(40),
+	MILITARY_AGENCY VARCHAR(20),
+	REALM LVARCHAR(1024),
+	EMAILVERIFIED CHAR(1),
+	VERIFICATIONTOKEN LVARCHAR(1024),
+	CREDENTIALS LVARCHAR(1024),
+	CHALLENGES LVARCHAR(1024),
+	STATUS LVARCHAR(1024),
+	CREATED DATE,
+	LASTUPDATED DATE
    );
 
 --------------------------------------------------------
 --  DDL for Table INVENTORY
 --------------------------------------------------------
 
-  CREATE TABLE "INVENTORY"
-   (	"ID" VARCHAR(20) NOT NULL,
-	"PRODUCT_ID" VARCHAR(20) NOT NULL,
-	"LOCATION_ID" VARCHAR(20),
-	"AVAILABLE" INTEGER,
-	"TOTAL" INTEGER
+  CREATE TABLE INVENTORY
+   (	ID VARCHAR(20) NOT NULL,
+	PRODUCT_ID VARCHAR(20) NOT NULL,
+	LOCATION_ID VARCHAR(20),
+	AVAILABLE INTEGER,
+	TOTAL INTEGER
    ) ;
 
 
@@ -76,53 +75,53 @@ DROP TABLE RESERVATION;
 --  DDL for Table LOCATION
 --------------------------------------------------------
 
-  CREATE TABLE "LOCATION"
-   (	"ID" VARCHAR(20) NOT NULL,
-	"STREET" VARCHAR(64),
-	"CITY" VARCHAR(64),
-	"ZIPCODE" VARCHAR(16),
-	"NAME" VARCHAR(32),
-	"GEO" VARCHAR(1024)
+  CREATE TABLE LOCATION
+   (	ID VARCHAR(20) NOT NULL,
+	STREET VARCHAR(64),
+	CITY VARCHAR(64),
+	ZIPCODE VARCHAR(16),
+	NAME VARCHAR(32),
+	GEO LVARCHAR(1024)
    );
 
 --------------------------------------------------------
 --  DDL for Table PRODUCT
 --------------------------------------------------------
 
-  CREATE TABLE "PRODUCT"
-   (	"ID" VARCHAR(20) NOT NULL,
-	"NAME" VARCHAR(64),
-	"AUDIBLE_RANGE" INTEGER,
-	"EFFECTIVE_RANGE" INTEGER,
-	"ROUNDS" INTEGER,
-	"EXTRAS" VARCHAR(64),
-	"FIRE_MODES" VARCHAR(64)
+  CREATE TABLE PRODUCT
+   (	ID VARCHAR(20) NOT NULL,
+	NAME VARCHAR(64),
+	AUDIBLE_RANGE INTEGER,
+	EFFECTIVE_RANGE INTEGER,
+	ROUNDS INTEGER,
+	EXTRAS VARCHAR(64),
+	FIRE_MODES VARCHAR(64)
    );
 
 --------------------------------------------------------
 --  DDL for Table RESERVATION
 --------------------------------------------------------
 
-  CREATE TABLE "RESERVATION"
-   (	"ID" VARCHAR(20) NOT NULL,
-	"PRODUCT_ID" VARCHAR(20),
-	"LOCATION_ID" VARCHAR(20),
-	"CUSTOMER_ID" VARCHAR(20),
-	"QTY" INT,
-	"STATUS" VARCHAR(20),
-	"RESERVE_DATE" DATE,
-	"PICKUP_DATE" DATE,
-	"RETURN_DATE" DATE
+  CREATE TABLE RESERVATION
+   (	ID VARCHAR(20) NOT NULL,
+	PRODUCT_ID VARCHAR(20),
+	LOCATION_ID VARCHAR(20),
+	CUSTOMER_ID VARCHAR(20),
+	QTY INT,
+	STATUS VARCHAR(20),
+	RESERVE_DATE DATE,
+	PICKUP_DATE DATE,
+	RETURN_DATE DATE
    );
 
 --------------------------------------------------------
 --  DDL for Table SESSION
 --------------------------------------------------------
 
-  CREATE TABLE "SESSION"
-   (	"ID" VARCHAR(64) NOT NULL,
-	"UID" VARCHAR(1024),
-	"TTL" INT
+  CREATE TABLE SESSION
+   (	ID VARCHAR(64) NOT NULL,
+	UID LVARCHAR(1024),
+	TTL INT
    );
 
 -- REM INSERTING into CUSTOMER
@@ -662,72 +661,72 @@ Insert into LOCATION (ID,STREET,CITY,ZIPCODE,NAME,GEO) values ('88','390 Lang Ro
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('4','M9',53,75,15,null,'Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('3','M1911',53,50,7,null,'Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('6','Makarov SD',0,50,8,null,'Single');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('7','PDW',53,75,30,null,'["Single","Full auto"]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('7','PDW',53,75,30,null,'[Single,Full auto]');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('8','Makarov PM',53,50,8,null,'Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('9','Double-barreled Shotgun',90,null,2,null,'Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('10','Saiga 12K',90,250,8,null,'Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('11','Remington 870 (Flashlight)',90,null,8,'Flashlight','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('12','Revolver',53,100,6,null,'Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('13','Winchester 1866',125,150,15,null,'Single');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('14','Bizon PP-19 SD',0,100,64,'Silenced','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('15','MP5SD6',0,100,30,'Silenced','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('16','MP5A5',53,100,30,null,'["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('17','AK-107',80,400,30,'Kobra sight','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('18','AK-107 GL',80,null,30,'Kobra sight','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('19','AK-107 GL PSO',80,400,30,'["Scope","GP-25 launcher"]','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('20','AK-107 PSO',80,600,30,'Scope','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('21','AK-74',80,300,30,null,'["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('22','AKM',149,400,30,null,'["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('23','AKS',149,200,30,null,'["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('24','AKS (gold)',149,200,30,null,'["Single","Full auto"]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('14','Bizon PP-19 SD',0,100,64,'Silenced','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('15','MP5SD6',0,100,30,'Silenced','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('16','MP5A5',53,100,30,null,'[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('17','AK-107',80,400,30,'Kobra sight','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('18','AK-107 GL',80,null,30,'Kobra sight','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('19','AK-107 GL PSO',80,400,30,'[Scope,GP-25 launcher]','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('20','AK-107 PSO',80,600,30,'Scope','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('21','AK-74',80,300,30,null,'[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('22','AKM',149,400,30,null,'[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('23','AKS',149,200,30,null,'[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('24','AKS (gold)',149,200,30,null,'[Single,Full auto]');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('25','M1014',90,null,8,null,'Single');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('26','AKS-74 Kobra',80,300,30,'Kobra sight','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('27','AKS-74 PSO',80,400,30,'Scope','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('28','AKS-74U',80,200,30,null,'["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('29','AKS-74UN Kobra',0,300,30,'["Kobra sight","Silenced"]','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('30','AK-74 GP-25',80,300,30,'GP-25 launcher','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('31','FN FAL AN/PVS-4',180,400,20,'NV scope','["Single","Burst"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('32','G36',80,400,30,'["Scope","Aimpoint sight"]','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('33','FN FAL',180,400,20,null,'["Single","Burst"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('34','G36 C',80,300,30,null,'["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('35','G36-C SD (camo)',0,300,30,'["Aimpoint sight","Silenced"]','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('36','G36A (camo)',80,400,30,'["Scope","Aimpoint sight"]','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('37','G36C (camo)',80,300,30,null,'["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('38','G36 K',80,400,30,'["Scope","Aimpoint sight"]','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('39','G36C-SD',0,300,30,'Aimpoint sight','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('40','G36K (camo)',80,400,30,'["Scope","Aimpoint sight"]','["Single","Burst","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('41','L85A2 ACOG GL',80,600,30,'["ACOG scope","M203 launcher"]','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('42','L85A2 SUSAT',80,300,30,'SUSAT optical scope','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('43','M16A2',80,400,30,null,'["Single","Burst"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('44','L85A2 AWS',80,300,30,'["Thermal scope","NV scope","Laser sight","Variable zoom"]','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('45','L85A2 Holo',80,300,30,'Holographic sight','["Single","Full auto"]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('26','AKS-74 Kobra',80,300,30,'Kobra sight','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('27','AKS-74 PSO',80,400,30,'Scope','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('28','AKS-74U',80,200,30,null,'[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('29','AKS-74UN Kobra',0,300,30,'[Kobra sight,Silenced]','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('30','AK-74 GP-25',80,300,30,'GP-25 launcher','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('31','FN FAL AN/PVS-4',180,400,20,'NV scope','[Single,Burst]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('32','G36',80,400,30,'[Scope,Aimpoint sight]','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('33','FN FAL',180,400,20,null,'[Single,Burst]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('34','G36 C',80,300,30,null,'[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('35','G36-C SD (camo)',0,300,30,'[Aimpoint sight,Silenced]','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('36','G36A (camo)',80,400,30,'[Scope,Aimpoint sight]','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('37','G36C (camo)',80,300,30,null,'[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('38','G36 K',80,400,30,'[Scope,Aimpoint sight]','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('39','G36C-SD',0,300,30,'Aimpoint sight','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('40','G36K (camo)',80,400,30,'[Scope,Aimpoint sight]','[Single,Burst,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('41','L85A2 ACOG GL',80,600,30,'[ACOG scope,M203 launcher]','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('42','L85A2 SUSAT',80,300,30,'SUSAT optical scope','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('43','M16A2',80,400,30,null,'[Single,Burst]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('44','L85A2 AWS',80,300,30,'[Thermal scope,NV scope,Laser sight,Variable zoom]','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('45','L85A2 Holo',80,300,30,'Holographic sight','[Single,Full auto]');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('46','Lee Enfield',162,400,10,null,'Single');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('47','M16A4 ACOG',80,600,30,'ACOG scope','["Single","Burst"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('49','M16A2 M203',80,400,30,'M203 launcher','["Single","Burst"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('48','M4A1',80,300,30,null,'["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('50','M4A1 Holo',80,300,30,'["Holographic sight","M203 launcher"]','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('51','M4A1 CCO',80,300,30,'Aimpoint sight','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('52','M4A1 CCO SD',0,200,30,'["Aimpoint sight","Silenced"]','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('53','M4A1 M203 RCO',80,600,30,'["ACOG sight","M203 launcher"]','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('54','M4A3 CCO',80,300,30,'["Aimpoint sight","Flashlight"]','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('55','RPK',80,400,30,null,'["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('56','Sa-58 CCO',149,300,30,'Aimpoint sight','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('57','Sa-58P',149,400,30,null,'["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('58','Sa-58V',149,200,30,null,'["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('59','Sa-58V ACOG',149,400,30,'ACOG sight','["Single","Full auto"]');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('60','ER7 RFW',180,2000,25,'["Scope","Aimpoint sight"]','Single');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('47','M16A4 ACOG',80,600,30,'ACOG scope','[Single,Burst]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('49','M16A2 M203',80,400,30,'M203 launcher','[Single,Burst]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('48','M4A1',80,300,30,null,'[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('50','M4A1 Holo',80,300,30,'[Holographic sight,M203 launcher]','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('51','M4A1 CCO',80,300,30,'Aimpoint sight','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('52','M4A1 CCO SD',0,200,30,'[Aimpoint sight,Silenced]','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('53','M4A1 M203 RCO',80,600,30,'[ACOG sight,M203 launcher]','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('54','M4A3 CCO',80,300,30,'[Aimpoint sight,Flashlight]','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('55','RPK',80,400,30,null,'[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('56','Sa-58 CCO',149,300,30,'Aimpoint sight','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('57','Sa-58P',149,400,30,null,'[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('58','Sa-58V',149,200,30,null,'[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('59','Sa-58V ACOG',149,400,30,'ACOG sight','[Single,Full auto]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('60','ER7 RFW',180,2000,25,'[Scope,Aimpoint sight]','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('61','AS50',455,1600,5,'Scope','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('62','KSVK',455,800,5,'Scope','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('63','CZ550',180,800,5,'Scope','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('64','DMR',180,800,20,'Scope','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('65','M107',455,1200,10,'Scope','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('66','M24',180,800,5,'Scope','Single');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('67','M40A3',180,800,5,'["Scope","Camo"]','Single');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('67','M40A3',180,800,5,'[Scope,Camo]','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('68','M14 AIM',180,500,20,'Aimpoint sight','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('69','M240',180,400,100,null,'Full auto');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('70','MG36',80,400,100,'Aimpoint sight','["Single","Burst","Full auto"]');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('70','MG36',80,400,100,'Aimpoint sight','[Single,Burst,Full auto]');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('72','PKM',180,400,100,null,'Full auto');
-Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('71','SVD Camo',180,1200,10,'["Scope","Camo"]','Single');
+Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('71','SVD Camo',180,1200,10,'[Scope,Camo]','Single');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('73','Mk 48 Mod 0',180,400,100,'Aimpoint sight','Full auto');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('74','M249 SAW',80,300,200,null,'Full auto');
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('75','Crowbar',2,1,null,null,'Single');
@@ -747,14 +746,14 @@ Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MO
 Insert into PRODUCT (ID,NAME,AUDIBLE_RANGE,EFFECTIVE_RANGE,ROUNDS,EXTRAS,FIRE_MODES) values ('5','M9 SD',0,75,15,'Silenced','Single');
 -- REM INSERTING into RESERVATION
 -- SET DEFINE OFF;
--- REM INSERTING into "SESSION"
+-- REM INSERTING into SESSION
 -- SET DEFINE OFF;
 
---------------------------------------------------------
---  View
---------------------------------------------------------
+-- --------------------------------------------------------
+-- --  View
+-- --------------------------------------------------------
 
-CREATE OR REPLACE VIEW INVENTORY_VIEW
+CREATE VIEW IF NOT EXISTS INVENTORY_VIEW
                 AS
   SELECT P.name AS product,
     L.name      AS location,
@@ -769,49 +768,49 @@ CREATE OR REPLACE VIEW INVENTORY_VIEW
 --  Constraints for Table CUSTOMER
 --------------------------------------------------------
 
-  ALTER TABLE "CUSTOMER" ADD PRIMARY KEY ("ID");
+  ALTER TABLE CUSTOMER ADD CONSTRAINT PRIMARY KEY (ID);
 
 --------------------------------------------------------
 --  Constraints for Table INVENTORY
 --------------------------------------------------------
 
-  ALTER TABLE "INVENTORY" ADD PRIMARY KEY ("ID");
+  ALTER TABLE INVENTORY ADD CONSTRAINT PRIMARY KEY (ID);
 
 --------------------------------------------------------
 --  Constraints for Table LOCATION
 --------------------------------------------------------
 
-  ALTER TABLE "LOCATION" ADD PRIMARY KEY ("ID");
+  ALTER TABLE LOCATION ADD CONSTRAINT PRIMARY KEY (ID);
 
 --------------------------------------------------------
 --  Constraints for Table PRODUCT
 --------------------------------------------------------
 
-  ALTER TABLE "PRODUCT" ADD PRIMARY KEY ("ID");
+  ALTER TABLE PRODUCT ADD CONSTRAINT PRIMARY KEY (ID);
 
 --------------------------------------------------------
 --  Constraints for Table SESSION
 --------------------------------------------------------
 
-  ALTER TABLE "SESSION" ADD PRIMARY KEY ("ID");
+  ALTER TABLE SESSION ADD CONSTRAINT PRIMARY KEY (ID);
 
 --------------------------------------------------------
 --  Ref Constraints for Table INVENTORY
 --------------------------------------------------------
 
-  ALTER TABLE "INVENTORY" ADD CONSTRAINT "LOCATION_FK" FOREIGN KEY ("LOCATION_ID")
-	  REFERENCES "LOCATION" ("ID");
-  ALTER TABLE "INVENTORY" ADD CONSTRAINT "PRODUCT_FK" FOREIGN KEY ("PRODUCT_ID")
-	  REFERENCES "PRODUCT" ("ID");
+  ALTER TABLE INVENTORY ADD CONSTRAINT FOREIGN KEY (LOCATION_ID)
+	  REFERENCES LOCATION (ID);
+  ALTER TABLE INVENTORY ADD CONSTRAINT FOREIGN KEY (PRODUCT_ID)
+	  REFERENCES PRODUCT (ID);
 
 --------------------------------------------------------
 --  Ref Constraints for Table RESERVATION
 --------------------------------------------------------
 
-  ALTER TABLE "RESERVATION" ADD CONSTRAINT "RESERVATION_CUSTOMER_FK" FOREIGN KEY ("CUSTOMER_ID")
-	  REFERENCES "CUSTOMER" ("ID");
-  ALTER TABLE "RESERVATION" ADD CONSTRAINT "RESERVATION_LOCATION_FK" FOREIGN KEY ("LOCATION_ID")
-	  REFERENCES "LOCATION" ("ID");
-  ALTER TABLE "RESERVATION" ADD CONSTRAINT "RESERVATION_PRODUCT_FK" FOREIGN KEY ("PRODUCT_ID")
-	  REFERENCES "PRODUCT" ("ID");
+  ALTER TABLE RESERVATION ADD CONSTRAINT FOREIGN KEY (CUSTOMER_ID)
+	  REFERENCES CUSTOMER (ID);
+  ALTER TABLE RESERVATION ADD CONSTRAINT FOREIGN KEY (LOCATION_ID)
+	  REFERENCES LOCATION (ID);
+  ALTER TABLE RESERVATION ADD CONSTRAINT FOREIGN KEY (PRODUCT_ID)
+	  REFERENCES PRODUCT (ID);
 
