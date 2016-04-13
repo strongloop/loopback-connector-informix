@@ -14,8 +14,8 @@ describe('migrations', function() {
 
     UserData = db.define('UserData', {
       email: { type: String, null: false, index: true,
-               db2: {columnName: 'email', dataType: 'VARCHAR',
-                     dataLength: 512, nullable: true} },
+               informix: {columnName: 'email', dataType: 'VARCHAR',
+                     dataLength: 255, nullable: true} },
       name: String,
       bio: Schema.Text,
       birthDate: Date,
@@ -53,54 +53,43 @@ describe('migrations', function() {
         fields.should.be.eql([
           {
             colno: 1,
-            datalength: 512,
-            // datatype: 'VARCHAR',
-            datatype: 296,
+            datalength: 255,
+            datatype: 269,
             name: 'email',
           },
           {
             colno: 2,
-            datalength: 512,
-            // datatype: 'VARCHAR',
+            datalength: 255,
             datatype: 40,
             name: 'name',
           },
           {
             colno: 3,
             datalength: 4096,
-            // datatype: 'VARCHAR',
             datatype: 40,
             name: 'bio',
           },
           {
             colno: 4,
-            // datalength: 10,
             datalength: 4365,
-            // datatype: 'TIMESTAMP',
             datatype: 10,
-            // name: 'birthDate',
-            name: 'birthdate',
+            name: 'birthDate',
           },
           {
             colno: 5,
             datalength: 4,
-            // datatype: 'INTEGER',
             datatype: 2,
-            // name: 'pendingPeriod',
-            name: 'pendingperiod',
+            name: 'pendingPeriod',
           },
           {
             colno: 6,
             datalength: 2,
-            // datatype: 'SMALLINT',
             datatype: 1,
-            // name: 'createdByAdmin',
-            name: 'createdbyadmin',
+            name: 'createdByAdmin',
           },
           {
             colno: 7,
             datalength: 4,
-            // datatype: 'INTEGER',
             datatype: 262,
             name: 'id',
           },
@@ -111,26 +100,22 @@ describe('migrations', function() {
     });
   });
 
-  it.skip('UserData should have correct indexes', function(done) {
+  it('UserData should have correct indexes', function(done) {
     // Note: getIndexes truncates multi-key indexes to the first member.
     // Hence index1 is correct.
     db.adapter.getTableStatus('UserData', function(err, fields, indexes) {
       if (err) {
-        console.log(err);
+        return done(Error(err));
       } else {
-        indexes[0].COLNAMES.should.be.eql('+id');
-        indexes[0].COMPRESSION.should.be.eql('N');
-        indexes[0].INDEXTYPE.should.be.eql('REG ');
-        indexes[0].TABNAME.should.be.eql('UserData');
-        indexes[0].TABSCHEMA.should.be.eql(global.config.schema);
-        indexes[0].UNIQUERULE.should.be.eql('P');
+        indexes[0].idxtype.should.be.eql('U');
+        indexes[0].tabname.should.be.eql('UserData');
+        indexes[0].part1.should.be.eql(7);
+        indexes[0].part2.should.be.eql(0);
 
-        indexes[1].COLNAMES.should.be.eql('+email+createdByAdmin');
-        indexes[1].COMPRESSION.should.be.eql('N');
-        indexes[1].INDEXTYPE.should.be.eql('REG ');
-        indexes[1].TABNAME.should.be.eql('UserData');
-        indexes[1].TABSCHEMA.should.be.eql(global.config.schema);
-        indexes[1].UNIQUERULE.should.be.eql('D');
+        indexes[1].idxtype.should.be.eql('D');
+        indexes[1].tabname.should.be.eql('UserData');
+        indexes[1].part1.should.be.eql(1);
+        indexes[1].part2.should.be.eql(6);
       }
 
       done();
@@ -184,45 +169,41 @@ describe('migrations', function() {
   //   });
   // });
 
-  it.skip('NumberData should have correct columns', function(done) {
+  it('NumberData should have correct columns', function(done) {
     db.adapter.getTableStatus('NumberData', function(err, fields, indexes) {
       if (err) {
-        console.log(err);
+        return done(Error(err));
       } else {
         fields.should.be.eql([
           {
-            COLNO: 0,
-            DATALENGTH: 10,
-            DATATYPE: 'DECIMAL',
-            NAME: 'number',
-            NULLS: 'N',
+            colno: 1,
+            datalength: 2563,
+            datatype: 261,
+            name: 'number',
           },
           {
-            COLNO: 1,
-            DATALENGTH: 2,
-            DATATYPE: 'SMALLINT',
-            NAME: 'tinyInt',
-            NULLS: 'Y',
+            colno: 2,
+            datalength: 2,
+            datatype: 1,
+            name: 'tinyInt',
           },
           {
-            COLNO: 2,
-            DATALENGTH: 4,
-            DATATYPE: 'INTEGER',
-            NAME: 'mediumInt',
-            NULLS: 'N',
+            colno: 3,
+            datalength: 4,
+            datatype: 258,
+            name: 'mediumInt',
           },
           {
-            COLNO: 3,
-            DATALENGTH: 16,
-            DATATYPE: 'DECIMAL',
-            NAME: 'floater',
-            NULLS: 'Y',
+            colno: 4,
+            datalength: 4103,
+            datatype: 5,
+            name: 'floater',
           },
-          { COLNO: 4,
-            DATALENGTH: 4,
-            DATATYPE: 'INTEGER',
-            NAME: 'id',
-            NULLS: 'N',
+          {
+            colno: 5,
+            datalength: 4,
+            datatype: 262,
+            name: 'id',
           },
         ]);
       }
@@ -231,33 +212,30 @@ describe('migrations', function() {
     });
   });
 
-  it.skip('DateData should have correct columns', function(done) {
+  it('DateData should have correct columns', function(done) {
     db.adapter.getTableStatus('DateData', function(err, fields, indexes) {
       if (err) {
-        console.log(err);
+        return done(Error(err));
       } else {
 
         fields.should.be.eql([
           {
-            COLNO: 0,
-            DATALENGTH: 10,
-            DATATYPE: 'TIMESTAMP',
-            NAME: 'dateTime',
-            NULLS: 'Y',
+            colno: 1,
+            datalength: 4365,
+            datatype: 10,
+            name: 'dateTime',
           },
           {
-            COLNO: 1,
-            DATALENGTH: 10,
-            DATATYPE: 'TIMESTAMP',
-            NAME: 'timestamp',
-            NULLS: 'Y',
+            colno: 2,
+            datalength: 4365,
+            datatype: 10,
+            name: 'timestamp',
           },
           {
-            COLNO: 2,
-            DATALENGTH: 4,
-            DATATYPE: 'INTEGER',
-            NAME: 'id',
-            NULLS: 'N',
+            colno: 3,
+            datalength: 4,
+            datatype: 262,
+            name: 'id',
           },
         ]);
       }
@@ -266,7 +244,7 @@ describe('migrations', function() {
     });
   });
 
-  it('should autoupdate', function(done) {
+  it.skip('should autoupdate', function(done) {
     var userExists = function(cb) {
       query('SELECT * FROM ' + global.config.schema + '.\"UserData\"',
         function(err, res) {
@@ -276,7 +254,7 @@ describe('migrations', function() {
 
     UserData.create({email: 'test@example.com'}, function(err, user) {
       if (err) {
-        console.log('Error: ', err);
+        return done(Error(err));
       } else {
         userExists(function(yep) {
           assert.ok(yep, 'User does not exist');
@@ -292,11 +270,11 @@ describe('migrations', function() {
         // This will not work as expected.
         db.autoupdate(function(err) {
           if (err)
-            throw new Error('Failed to autoupdate database:' + err);
+            return done(Error(err));
 
           db.adapter.getTableStatus('UserData', function(err, fields, indexes) {
             if (err)
-              throw new Error('Failed to get fields');
+              return done(Error(err));
 
             // change nullable for email
             assert.equal(fields[0].NULLS, 'N',
@@ -315,13 +293,13 @@ describe('migrations', function() {
               assert.equal(fields[7].DATATYPE, 'BIGINT',
                 'New column type is not bigint(20) unsigned');
             }
+
             // drop column - will not happen.
             // assert.ok(!fields.pendingPeriod,
             // 'Did not drop column pendingPeriod');
             // user still exists
             userExists(function(yep) {
               assert.ok(yep, 'User does not exist');
-              // done();
             });
           });
         });
@@ -335,7 +313,7 @@ describe('migrations', function() {
     // 'drop column'
     UserData.dataSource.isActual(function(err, ok) {
       if (err)
-        done();
+        return done(Error(err));
 
       // TODO: Need to validate columns/indexes to test actuality and return
       // appropriate values.
@@ -344,7 +322,7 @@ describe('migrations', function() {
       // UserData.defineProperty('email', false); Can't undefine currently.
       UserData.dataSource.isActual(function(err, ok) {
         if (err)
-          done();
+          return done(Error(err));
 
         // assert.ok(!ok, 'dataSource is actual (shouldn\t be)');
         done();
@@ -352,14 +330,14 @@ describe('migrations', function() {
     });
   });
 
-  it.skip('should allow numbers with decimals', function(done) {
+  it('should allow numbers with decimals', function(done) {
     NumberData.create({number: 1.1234567, tinyInt: 12345, mediumInt: -1234567,
       floater: 123456789.1234567 }, function(err, obj) {
       assert.ok(!err);
       assert.ok(obj);
       NumberData.findById(obj.id, function(err, found) {
         if (err) {
-          console.log(err);
+          return done(Error(err));
         } else {
           assert.equal(found.number, 1.123);
           assert.equal(found.tinyInt, 12345);
@@ -371,7 +349,7 @@ describe('migrations', function() {
     });
   });
 
-  it.skip('should allow both kinds of date columns', function(done) {
+  it('should allow both kinds of date columns', function(done) {
     DateData.create({
       dateTime: new Date('Aug 9 1996 07:47:33 GMT'),
       timestamp: new Date('Sep 22 2007 17:12:22 GMT'),
@@ -380,7 +358,7 @@ describe('migrations', function() {
       assert.ok(obj);
       DateData.findById(obj.id, function(err, found) {
         if (err) {
-          console.log(err);
+          return done(Error(err));
         } else {
           assert.equal(found.dateTime.toGMTString(),
             'Fri, 09 Aug 1996 07:47:33 GMT');
