@@ -1,3 +1,7 @@
+**PLEASE CREATE ISSUES AT https://github.com/strongloop/loopback/issues**
+
+---
+
 #loopback-connector-informix
 
 [IBM® Informix®]() is the database of choice for robust, enterprise-wide solutions handling high-volume workloads.
