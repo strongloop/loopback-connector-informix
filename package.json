@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/strongloop/loopback-connector-informix",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-connector-informix/issues"
+    "url": "https://github.com/strongloop/loopback/issues"
   },
   "license": "SEE LICENSE IN LICENSE"
 }
