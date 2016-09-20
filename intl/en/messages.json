@@ -1,0 +1,10 @@
+{
+  "5ad265d55cba0590648ab6e4082a7ffc": "Placeholder for identifiers is not supported: {0}",
+  "80a32e80cbed65eba2103201a7c94710": "Model not found: {0}",
+  "85bdbbfb1bb3e7546e7731eebf414b89": "Scale without Precision does not make sense",
+  "8789d65de441e93990c482e12c39ff9e": "Invalid connection string: {0}",
+  "a4eb9d2c3bac1b4f7adff30970ee26cc": "options must be an object: {0}",
+  "b0262f0bd6f0836e16e1a0aa78953475": "Invalid isolationLevel: {0}",
+  "d07486ef2392ae07264a7e307a1cad7b": "Column organized tables are not currently supported",
+  "d7c8c85bf79bbe1b7188497c32c3b0ca": "Failed"
+}
