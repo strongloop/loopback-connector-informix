@@ -1,3 +1,4 @@
+var g = require('../../lib/globalize');
 var DataSource = require('loopback-datasource-juggler').DataSource;
 var Informix = require('../'); // loopback-connector-informix
 
@@ -32,6 +33,6 @@ db.autoupdate('User', function(err) {
   });
 
   User.destroyAll(function() {
-    console.log('example complete');
+    g.log('example complete');
   });
 });
