@@ -1,3 +1,10 @@
+// Copyright IBM Corp. 2016. All Rights Reserved.
+// Node module: loopback-connector-informix
+// This file is licensed under the Artistic License 2.0.
+// License text available at https://opensource.org/licenses/Artistic-2.0
+
+'use strict';
+
 /* eslint-env node, mocha */
 process.env.NODE_ENV = 'test';
 var assert = require('assert');
@@ -16,7 +23,7 @@ describe.skip('discoverModels', function() {
     it('should return an array of db schemas', function(done) {
       db.connector.discoverDatabaseSchemas(function(err, schemas) {
         if (err) return done(err);
-        schemas.should.be.an.array;
+        schemas.should.be.an.Array();
         schemas.length.should.be.above(0);
         done();
       });
@@ -67,7 +74,6 @@ describe.skip('discoverModels', function() {
 
   describe('Discover models excluding views', function() {
     it('should return an array of only tables', function(done) {
-
       db.discoverModelDefinitions({views: false, limit: 3},
         function(err, models) {
           if (err) {
@@ -92,7 +98,6 @@ describe.skip('discoverModels', function() {
 
 describe.skip('Discover models including other users', function() {
   it('should return an array of all tables and views', function(done) {
-
     db.discoverModelDefinitions({all: true, limit: 3},
       function(err, models) {
         if (err) {
@@ -130,7 +135,6 @@ describe.skip('Discover model properties', function() {
       });
     });
   });
-
 });
 
 describe.skip('Discover model primary keys', function() {
@@ -219,10 +223,12 @@ describe.skip('Discover LDL schema from a table', function() {
           assert(schema.properties.productId);
           assert(schema.properties.productId.required);
           assert(schema.properties.productId.type === 'String');
-          assert(schema.properties.productId.informix.columnName === 'PRODUCT_ID');
+          assert(
+            schema.properties.productId.informix.columnName === 'PRODUCT_ID');
           assert(schema.properties.locationId);
           assert(schema.properties.locationId.type === 'String');
-          assert(schema.properties.locationId.informix.columnName === 'LOCATION_ID');
+          assert(
+            schema.properties.locationId.informix.columnName === 'LOCATION_ID');
           assert(schema.properties.available);
           assert(schema.properties.available.required === false);
           assert(schema.properties.available.type === 'Number');
@@ -252,10 +258,12 @@ describe.skip('Discover and build models', function() {
           assert(schema.settings.informix.table === 'INVENTORY');
           assert(schema.properties.productId);
           assert(schema.properties.productId.type === String);
-          assert(schema.properties.productId.informix.columnName === 'PRODUCT_ID');
+          assert(
+            schema.properties.productId.informix.columnName === 'PRODUCT_ID');
           assert(schema.properties.locationId);
           assert(schema.properties.locationId.type === String);
-          assert(schema.properties.locationId.informix.columnName === 'LOCATION_ID');
+          assert(
+            schema.properties.locationId.informix.columnName === 'LOCATION_ID');
           assert(schema.properties.available);
           assert(schema.properties.available.type === Number);
           assert(schema.properties.total);

@@ -1,3 +1,10 @@
+// Copyright IBM Corp. 2016. All Rights Reserved.
+// Node module: loopback-connector-informix
+// This file is licensed under the Artistic License 2.0.
+// License text available at https://opensource.org/licenses/Artistic-2.0
+
+'use strict';
+
 module.exports = require('should');
 
 var DataSource = require('loopback-datasource-juggler').DataSource;
@@ -16,8 +23,11 @@ var config = {
 global.config = config;
 
 global.getDataSource = global.getSchema = function(options) {
-  var db = new DataSource(require('../'), config);
-  return db;
+  // Skip requiring module due to bug in underlying module. possibly related to
+  // https://github.com/ibmdb/node-ibm_db/issues/64 or
+  // https://github.com/ibmdb/node-ibm_db/issues/171
+  // var db = new DataSource(require('../'), config);
+  // return db;
 };
 
 global.sinon = require('sinon');

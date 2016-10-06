@@ -1,3 +1,12 @@
+// Copyright IBM Corp. 2016. All Rights Reserved.
+// Node module: loopback-connector-informix
+// This file is licensed under the Artistic License 2.0.
+// License text available at https://opensource.org/licenses/Artistic-2.0
+
+'use strict';
+
+var describe = require('./describe');
+
 /* eslint-env node, mocha */
 process.env.NODE_ENV = 'test';
 
@@ -9,7 +18,6 @@ var Transaction = require('loopback-connector').Transaction;
 var db, Post;
 
 describe('transactions', function() {
-
   before(function(done) {
     db = global.getDataSource();
     Post = db.define('PostTX', {
@@ -57,7 +65,6 @@ describe('transactions', function() {
   }
 
   describe('commit', function() {
-
     var post = {title: 't1', content: 'c1'};
     before(createPostInTx(post));
 
@@ -75,11 +82,11 @@ describe('transactions', function() {
   });
 
   describe('rollback', function() {
-
     var post = {title: 't2', content: 'c2'};
     before(createPostInTx(post));
 
-    it.skip('should not see the uncommitted insert', expectToFindPosts(post, 0));
+    it.skip('should not see the uncommitted insert',
+      expectToFindPosts(post, 0));
 
     it('should see the uncommitted insert from the same transaction',
       expectToFindPosts(post, 1, true));
@@ -90,5 +97,4 @@ describe('transactions', function() {
 
     it('should not see the rolledback insert', expectToFindPosts(post, 0));
   });
-
 });

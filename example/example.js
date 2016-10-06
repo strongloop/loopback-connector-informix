@@ -1,3 +1,5 @@
+'use strict';
+
 var DataSource = require('loopback-datasource-juggler').DataSource;
 var Informix = require('../'); // loopback-connector-informix
 
