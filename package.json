@@ -1,6 +1,9 @@
 {
   "name": "loopback-connector-informix",
   "version": "1.0.0",
+  "publishConfig": {
+    "tag": "lts"
+  },
   "description": "LoopBack Connector for IBM Informix",
   "keywords": [
     "IBM",
