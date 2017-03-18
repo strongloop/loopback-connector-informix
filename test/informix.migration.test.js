@@ -43,8 +43,8 @@ describe('migrations', function() {
     });
 
     DateData = db.define('DateData', {
-      dateTime: {type: Date, dataType: 'timestamp'},
-      timestamp: {type: Date, dataType: 'timestamp'},
+      dt: {type: Date, dataType: 'timestamp'},
+      tstamp: {type: Date, dataType: 'timestamp'},
     });
 
     db.automigrate(['UserData', 'NumberData', 'DateData'], done);
@@ -63,7 +63,7 @@ describe('migrations', function() {
           {
             colno: 1,
             datalength: 255,
-            datatype: 269,
+            datatype: 296,
             name: 'email',
           },
           {
@@ -82,19 +82,19 @@ describe('migrations', function() {
             colno: 4,
             datalength: 4365,
             datatype: 10,
-            name: 'birthDate',
+            name: 'birthdate',
           },
           {
             colno: 5,
             datalength: 4,
             datatype: 2,
-            name: 'pendingPeriod',
+            name: 'pendingperiod',
           },
           {
             colno: 6,
             datalength: 2,
             datatype: 1,
-            name: 'createdByAdmin',
+            name: 'createdbyadmin',
           },
           {
             colno: 7,
@@ -117,12 +117,12 @@ describe('migrations', function() {
         return done(Error(err));
       } else {
         indexes[0].idxtype.should.be.eql('U');
-        indexes[0].tabname.should.be.eql('UserData');
+        indexes[0].tabname.should.be.eql('userdata');
         indexes[0].part1.should.be.eql(7);
         indexes[0].part2.should.be.eql(0);
 
         indexes[1].idxtype.should.be.eql('D');
-        indexes[1].tabname.should.be.eql('UserData');
+        indexes[1].tabname.should.be.eql('userdata');
         indexes[1].part1.should.be.eql(1);
         indexes[1].part2.should.be.eql(6);
       }
@@ -194,13 +194,13 @@ describe('migrations', function() {
             colno: 2,
             datalength: 2,
             datatype: 1,
-            name: 'tinyInt',
+            name: 'tinyint',
           },
           {
             colno: 3,
             datalength: 4,
             datatype: 258,
-            name: 'mediumInt',
+            name: 'mediumint',
           },
           {
             colno: 4,
@@ -231,13 +231,13 @@ describe('migrations', function() {
             colno: 1,
             datalength: 4365,
             datatype: 10,
-            name: 'dateTime',
+            name: 'dt',
           },
           {
             colno: 2,
             datalength: 4365,
             datatype: 10,
-            name: 'timestamp',
+            name: 'tstamp',
           },
           {
             colno: 3,
@@ -359,8 +359,8 @@ describe('migrations', function() {
 
   it('should allow both kinds of date columns', function(done) {
     DateData.create({
-      dateTime: new Date('Aug 9 1996 07:47:33 GMT'),
-      timestamp: new Date('Sep 22 2007 17:12:22 GMT'),
+      dt: new Date('Aug 9 1996 07:47:33 GMT'),
+      tstamp: new Date('Sep 22 2007 17:12:22 GMT'),
     }, function(err, obj) {
       assert.ok(!err);
       assert.ok(obj);
@@ -368,9 +368,9 @@ describe('migrations', function() {
         if (err) {
           return done(Error(err));
         } else {
-          assert.equal(found.dateTime.toGMTString(),
+          assert.equal(found.dt.toGMTString(),
             'Fri, 09 Aug 1996 07:47:33 GMT');
-          assert.equal(found.timestamp.toGMTString(),
+          assert.equal(found.tstamp.toGMTString(),
             'Sat, 22 Sep 2007 17:12:22 GMT');
         }
         done();
