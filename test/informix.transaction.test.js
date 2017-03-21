@@ -85,7 +85,7 @@ describe('transactions', function() {
     var post = {title: 't2', content: 'c2'};
     before(createPostInTx(post));
 
-    it.skip('should not see the uncommitted insert',
+    it('should not see the uncommitted insert',
       expectToFindPosts(post, 0));
 
     it('should see the uncommitted insert from the same transaction',

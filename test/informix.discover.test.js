@@ -18,7 +18,7 @@ before(function() {
   config = global.config;
 });
 
-describe('discoverModels', function() {
+describe.skip('discoverModels', function() {
   describe.skip('Discover database schemas', function() {
     it('should return an array of db schemas', function(done) {
       db.connector.discoverDatabaseSchemas(function(err, schemas) {
@@ -95,7 +95,7 @@ describe('discoverModels', function() {
   });
 });
 
-describe('Discover models including other users', function() {
+describe.skip('Discover models including other users', function() {
   it('should return an array of all tables and views', function(done) {
     db.discoverModelDefinitions({all: true, limit: 3},
       function(err, models) {
@@ -117,7 +117,7 @@ describe('Discover models including other users', function() {
   });
 });
 
-describe('Discover model properties', function() {
+describe.skip('Discover model properties', function() {
   describe('Discover a named model', function() {
     it('should return an array of columns for PRODUCT', function(done) {
       db.discoverModelProperties('PRODUCT', function(err, models) {
@@ -144,7 +144,6 @@ describe.skip('Discover model primary keys', function() {
         done(err);
       } else {
         models.forEach(function(m) {
-          console.log(m);
           assert(m.tableName === 'PRODUCT');
         });
         done(null, models);
@@ -162,7 +161,6 @@ describe.skip('Discover model primary keys', function() {
             done(err);
           } else {
             models.forEach(function(m) {
-              // console.dir(m);
               assert(m.tableName === 'PRODUCT');
             });
             done(null, models);
