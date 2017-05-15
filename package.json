@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha",
+    "test": "mocha --timeout 5000",
     "posttest": "npm run lint"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "debug": "^2.2.0",
     "ibm_db": "^0.0.19",
     "loopback-connector": "^2.3.0",
+    "loopback-ibmdb": "^1.0.0",
     "strong-globalize": "^2.7.0"
   },
   "devDependencies": {
