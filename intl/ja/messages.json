@@ -1,11 +1,19 @@
 {
-  "5ad265d55cba0590648ab6e4082a7ffc": "ID のプレースホルダーは、サポートされていません: {0}",
+  "0cc360c963609b7c4ecf0b82d02a4fff": "{{addPropertyToActual()}} は現在サポートされていません。",
+  "130848fb8a2410bbb210d1e4b215b9f0": "{{showFields()}} は現在サポートされていません。",
+  "36b3bde9dcd609e0be9a05c7fcbeaadb": "データ: ",
+  "36c49732b9f58d259812cfb5ec6de895": "{{searchForPropertyInActual()}} は現在サポートされていません。",
+  "388f95dbd90b33cabc5c2f1c79767662": "{{propertyHasNotBeenDeleted()}} は現在サポートされていません。",
+  "5ad265d55cba0590648ab6e4082a7ffc": "ID のプレースホルダーはサポートされていません: {0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "{{showIndexes()}} は現在サポートされていません。",
+  "658d8d500a2672b722bbef8bda5b6272": "{{getColumnsToDrop()}} は現在サポートされていません。",
   "80a32e80cbed65eba2103201a7c94710": "モデルが見つかりません: {0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "関数 {{setDefaultOptions}} はサポートされていません",
   "85bdbbfb1bb3e7546e7731eebf414b89": "精度が指定されていないスケールは無効です",
-  "8789d65de441e93990c482e12c39ff9e": "接続ストリングが無効です: {0}",
+  "8608b869d7e9337160761d61314ed998": "{{getAddModifyColumns()}} は現在サポートされていません。",
+  "9fe8bf7bb0666019398fc51ea7918791": "関数 {{setNullableProperty}} はサポートされていません",
   "a4eb9d2c3bac1b4f7adff30970ee26cc": "オプションはオブジェクトでなければなりません: {0}",
-  "b0262f0bd6f0836e16e1a0aa78953475": "無効な isolationLevel: {0}",
-  "d07486ef2392ae07264a7e307a1cad7b": "カラム・オーガナイズ表は、現在サポートされていません",
-  "d7c8c85bf79bbe1b7188497c32c3b0ca": "失敗しました"
+  "a667e8c3f10277513e38863832b0119d": "{{getDropColumns()}} は現在サポートされていません。",
+  "baa04cd08950779fd7a771e9b3bfc36d": "{{applySqlChanges()}} は現在サポートされていません。"
 }
 

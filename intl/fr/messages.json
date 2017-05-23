@@ -1,11 +1,19 @@
 {
+  "0cc360c963609b7c4ecf0b82d02a4fff": "{{addPropertyToActual()}} n'est pas pris en charge actuellement.",
+  "130848fb8a2410bbb210d1e4b215b9f0": "{{showFields()}} n'est pas pris en charge actuellement.",
+  "36b3bde9dcd609e0be9a05c7fcbeaadb": "DONNEES : ",
+  "36c49732b9f58d259812cfb5ec6de895": "{{searchForPropertyInActual()}} n'est pas pris en charge actuellement.",
+  "388f95dbd90b33cabc5c2f1c79767662": "{{propertyHasNotBeenDeleted()}} n'est pas pris en charge actuellement.",
   "5ad265d55cba0590648ab6e4082a7ffc": "La marque de réservation des identificateurs n'est pas prise en charge : {0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "{{showIndexes()}} n'est pas pris en charge actuellement.",
+  "658d8d500a2672b722bbef8bda5b6272": "{{getColumnsToDrop()}} n'est pas pris en charge actuellement.",
   "80a32e80cbed65eba2103201a7c94710": "Modèle introuvable : {0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "La fonction {{setDefaultOptions}} n'est pas prise en charge",
   "85bdbbfb1bb3e7546e7731eebf414b89": "Une échelle sans précision est inutile",
-  "8789d65de441e93990c482e12c39ff9e": "Chaîne de connexion non valide : {0}",
-  "a4eb9d2c3bac1b4f7adff30970ee26cc": "options doit être un objet : {0}",
-  "b0262f0bd6f0836e16e1a0aa78953475": "Niveau d'isolement non valide : {0}",
-  "d07486ef2392ae07264a7e307a1cad7b": "Les tables organisées en colonnes ne sont pas prises en charge",
-  "d7c8c85bf79bbe1b7188497c32c3b0ca": "Echec"
+  "8608b869d7e9337160761d61314ed998": "{{getAddModifyColumns()}} n'est pas pris en charge actuellement.",
+  "9fe8bf7bb0666019398fc51ea7918791": "La fonction {{setNullableProperty}} n'est pas prise en charge",
+  "a4eb9d2c3bac1b4f7adff30970ee26cc": "Les options doivent être un objet : {0}",
+  "a667e8c3f10277513e38863832b0119d": "{{getDropColumns()}} n'est pas pris en charge actuellement.",
+  "baa04cd08950779fd7a771e9b3bfc36d": "{{applySqlChanges()}} n'est pas pris en charge actuellement."
 }
 

@@ -1,11 +1,19 @@
 {
+  "0cc360c963609b7c4ecf0b82d02a4fff": "{{addPropertyToActual()}} wird derzeit nicht unterstützt.",
+  "130848fb8a2410bbb210d1e4b215b9f0": "{{showFields()}} wird derzeit nicht unterstützt.",
+  "36b3bde9dcd609e0be9a05c7fcbeaadb": "DATEN: ",
+  "36c49732b9f58d259812cfb5ec6de895": "{{searchForPropertyInActual()}} wird derzeit nicht unterstützt.",
+  "388f95dbd90b33cabc5c2f1c79767662": "{{propertyHasNotBeenDeleted()}} wird derzeit nicht unterstützt.",
   "5ad265d55cba0590648ab6e4082a7ffc": "Platzhalter für IDs wird nicht unterstützt: {0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "{{showIndexes()}} wird derzeit nicht unterstützt.",
+  "658d8d500a2672b722bbef8bda5b6272": "{{getColumnsToDrop()}} wird derzeit nicht unterstützt.",
   "80a32e80cbed65eba2103201a7c94710": "Modell nicht gefunden: {0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "Funktion {{setDefaultOptions}} nicht unterstützt",
   "85bdbbfb1bb3e7546e7731eebf414b89": "Maßstab ohne Genauigkeit macht keinen Sinn",
-  "8789d65de441e93990c482e12c39ff9e": "Ungültige Verbindungszeichenfolge: {0}",
+  "8608b869d7e9337160761d61314ed998": "{{getAddModifyColumns()}} wird derzeit nicht unterstützt.",
+  "9fe8bf7bb0666019398fc51ea7918791": "Funktion {{setNullableProperty}} nicht unterstützt",
   "a4eb9d2c3bac1b4f7adff30970ee26cc": "'options' muss ein Objekt sein: {0}",
-  "b0262f0bd6f0836e16e1a0aa78953475": "Ungültige isolationLevel: {0}",
-  "d07486ef2392ae07264a7e307a1cad7b": "Nach Spalten organisierte Tabellen werden aktuell nicht unterstützt",
-  "d7c8c85bf79bbe1b7188497c32c3b0ca": "Fehlgeschlagen"
+  "a667e8c3f10277513e38863832b0119d": "{{getDropColumns()}} wird derzeit nicht unterstützt.",
+  "baa04cd08950779fd7a771e9b3bfc36d": "{{applySqlChanges()}} wird derzeit nicht unterstützt."
 }
 

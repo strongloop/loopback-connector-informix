@@ -1,11 +1,19 @@
 {
+  "0cc360c963609b7c4ecf0b82d02a4fff": "{{addPropertyToActual()}} não é suportado atualmente.",
+  "130848fb8a2410bbb210d1e4b215b9f0": "{{showFields()}} não é suportado atualmente.",
+  "36b3bde9dcd609e0be9a05c7fcbeaadb": "DADOS: ",
+  "36c49732b9f58d259812cfb5ec6de895": "{{searchForPropertyInActual()}} não é suportado atualmente.",
+  "388f95dbd90b33cabc5c2f1c79767662": "{{propertyHasNotBeenDeleted()}} não é suportado atualmente.",
   "5ad265d55cba0590648ab6e4082a7ffc": "O item temporário para identificadores não é suportado: {0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "{{showIndexes()}} não é suportado atualmente.",
+  "658d8d500a2672b722bbef8bda5b6272": "{{getColumnsToDrop()}} não é suportado atualmente.",
   "80a32e80cbed65eba2103201a7c94710": "Modelo não localizado: {0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "Função {{setDefaultOptions}} não suportada",
   "85bdbbfb1bb3e7546e7731eebf414b89": "Escala sem Precisão não faz sentido",
-  "8789d65de441e93990c482e12c39ff9e": "Sequência de conexões inválida: {0}",
-  "a4eb9d2c3bac1b4f7adff30970ee26cc": "as opções devem ser um objeto: {0}",
-  "b0262f0bd6f0836e16e1a0aa78953475": "isolationLevel inválido: {0}",
-  "d07486ef2392ae07264a7e307a1cad7b": "Tabelas organizadas por coluna não são suportadas atualmente",
-  "d7c8c85bf79bbe1b7188497c32c3b0ca": "Falha"
+  "8608b869d7e9337160761d61314ed998": "{{getAddModifyColumns()}} não é suportado atualmente.",
+  "9fe8bf7bb0666019398fc51ea7918791": "Função {{setNullableProperty}} não suportada",
+  "a4eb9d2c3bac1b4f7adff30970ee26cc": "As opções devem ser um objeto: {0}",
+  "a667e8c3f10277513e38863832b0119d": "{{getDropColumns()}} não é suportado atualmente.",
+  "baa04cd08950779fd7a771e9b3bfc36d": "{{applySqlChanges()}} não é suportado atualmente."
 }
 

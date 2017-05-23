@@ -1,11 +1,19 @@
 {
+  "0cc360c963609b7c4ecf0b82d02a4fff": "{{addPropertyToActual()}}은(는) 현재 지원되지 않습니다. ",
+  "130848fb8a2410bbb210d1e4b215b9f0": "{{showFields()}}은(는) 현재 지원되지 않습니다. ",
+  "36b3bde9dcd609e0be9a05c7fcbeaadb": "데이터: ",
+  "36c49732b9f58d259812cfb5ec6de895": "{{searchForPropertyInActual()}}은(는) 현재 지원되지 않습니다. ",
+  "388f95dbd90b33cabc5c2f1c79767662": "{{propertyHasNotBeenDeleted()}}은(는) 현재 지원되지 않습니다. ",
   "5ad265d55cba0590648ab6e4082a7ffc": "ID의 플레이스홀더가 지원되지 않음: {0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "{{showIndexes()}}은(는) 현재 지원되지 않습니다. ",
+  "658d8d500a2672b722bbef8bda5b6272": "{{getColumnsToDrop()}}은(는) 현재 지원되지 않습니다. ",
   "80a32e80cbed65eba2103201a7c94710": "모델을 찾을 수 없음: {0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "{{setDefaultOptions}} 함수는 지원되지 않음",
   "85bdbbfb1bb3e7546e7731eebf414b89": "정밀도가 없는 스케일은 사용할 수 없음",
-  "8789d65de441e93990c482e12c39ff9e": "올바르지 않은 연결 문자열: {0}",
-  "a4eb9d2c3bac1b4f7adff30970ee26cc": "옵션이 오브젝트여야 함: {0}",
-  "b0262f0bd6f0836e16e1a0aa78953475": "올바르지 않은 isolationLevel: {0}",
-  "d07486ef2392ae07264a7e307a1cad7b": "열이 구성된 테이블은 현재 지원되지 않음",
-  "d7c8c85bf79bbe1b7188497c32c3b0ca": "실패함"
+  "8608b869d7e9337160761d61314ed998": "{{getAddModifyColumns()}}은(는) 현재 지원되지 않습니다. ",
+  "9fe8bf7bb0666019398fc51ea7918791": "{{setNullableProperty}} 함수는 지원되지 않음",
+  "a4eb9d2c3bac1b4f7adff30970ee26cc": "옵션은 오브젝트여야 함: {0}",
+  "a667e8c3f10277513e38863832b0119d": "{{getDropColumns()}}은(는) 현재 지원되지 않습니다. ",
+  "baa04cd08950779fd7a771e9b3bfc36d": "{{applySqlChanges()}}은(는) 현재 지원되지 않습니다. "
 }
 

@@ -1,11 +1,19 @@
 {
+  "0cc360c963609b7c4ecf0b82d02a4fff": "目前不支援 {{addPropertyToActual()}}。",
+  "130848fb8a2410bbb210d1e4b215b9f0": "目前不支援 {{showFields()}}。",
+  "36b3bde9dcd609e0be9a05c7fcbeaadb": "資料：",
+  "36c49732b9f58d259812cfb5ec6de895": "目前不支援 {{searchForPropertyInActual()}}。",
+  "388f95dbd90b33cabc5c2f1c79767662": "目前不支援 {{propertyHasNotBeenDeleted()}}。",
   "5ad265d55cba0590648ab6e4082a7ffc": "不支援 ID 的位置保留元：{0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "目前不支援 {{showIndexes()}}。",
+  "658d8d500a2672b722bbef8bda5b6272": "目前不支援 {{getColumnsToDrop()}}。",
   "80a32e80cbed65eba2103201a7c94710": "找不到模型：{0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "不支援函數 {{setDefaultOptions}}",
   "85bdbbfb1bb3e7546e7731eebf414b89": "缺少精準度的單位沒有意義",
-  "8789d65de441e93990c482e12c39ff9e": "無效的連線字串：{0}",
+  "8608b869d7e9337160761d61314ed998": "目前不支援 {{getAddModifyColumns()}}。",
+  "9fe8bf7bb0666019398fc51ea7918791": "不支援函數 {{setNullableProperty}}",
   "a4eb9d2c3bac1b4f7adff30970ee26cc": "options 必須是物件：{0}",
-  "b0262f0bd6f0836e16e1a0aa78953475": "無效 isolationLevel：{0}",
-  "d07486ef2392ae07264a7e307a1cad7b": "目前不支援以直欄組織的表格",
-  "d7c8c85bf79bbe1b7188497c32c3b0ca": "失敗"
+  "a667e8c3f10277513e38863832b0119d": "目前不支援 {{getDropColumns()}}。",
+  "baa04cd08950779fd7a771e9b3bfc36d": "目前不支援 {{applySqlChanges()}}。"
 }
 

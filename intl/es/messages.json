@@ -1,11 +1,19 @@
 {
+  "0cc360c963609b7c4ecf0b82d02a4fff": "{{addPropertyToActual()}} no está soportado actualmente.",
+  "130848fb8a2410bbb210d1e4b215b9f0": "{{showFields()}} no está soportado actualmente.",
+  "36b3bde9dcd609e0be9a05c7fcbeaadb": "DATA: ",
+  "36c49732b9f58d259812cfb5ec6de895": "{{searchForPropertyInActual()}} no está soportado actualmente.",
+  "388f95dbd90b33cabc5c2f1c79767662": "{{propertyHasNotBeenDeleted()}} no está soportado actualmente.",
   "5ad265d55cba0590648ab6e4082a7ffc": "El marcador de posición para identificadores no está soportado: {0}",
-  "80a32e80cbed65eba2103201a7c94710": "Modelo no encontrado: {0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "{{showIndexes()}} no está soportado actualmente.",
+  "658d8d500a2672b722bbef8bda5b6272": "{{getColumnsToDrop()}} no está soportado actualmente.",
+  "80a32e80cbed65eba2103201a7c94710": "No se ha encontrado el modelo: {0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "Función {{setDefaultOptions}} no soportada",
   "85bdbbfb1bb3e7546e7731eebf414b89": "Una escala sin precisión no tiene sentido",
-  "8789d65de441e93990c482e12c39ff9e": "Serie de conexión no válida: {0}",
+  "8608b869d7e9337160761d61314ed998": "{{getAddModifyColumns()}} no está soportado actualmente.",
+  "9fe8bf7bb0666019398fc51ea7918791": "Función {{setNullableProperty}} no soportada",
   "a4eb9d2c3bac1b4f7adff30970ee26cc": "options debe ser un objeto: {0}",
-  "b0262f0bd6f0836e16e1a0aa78953475": "Nivel de aislamiento no válido: {0}",
-  "d07486ef2392ae07264a7e307a1cad7b": "Las tablas organizadas en columnas no están soportadas actualmente",
-  "d7c8c85bf79bbe1b7188497c32c3b0ca": "Anómalo"
+  "a667e8c3f10277513e38863832b0119d": "{{getDropColumns()}} no está soportado actualmente.",
+  "baa04cd08950779fd7a771e9b3bfc36d": "{{applySqlChanges()}} no está soportado actualmente."
 }
 
