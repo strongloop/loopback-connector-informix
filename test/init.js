@@ -5,8 +5,6 @@
 
 'use strict';
 
-var describe = require('./describe');
-
 module.exports = require('should');
 
 var DataSource = require('loopback-datasource-juggler').DataSource;
