@@ -1,3 +1,17 @@
+2017-06-22, Version 2.1.0
+=========================
+
+ * Require init on mocha args (ssh24)
+
+ * Update Italian translated strings Q2 2017 (Allen Boone)
+
+ * Update translated strings Q2 2017 (Allen Boone)
+
+ * Add docker setup (ssh24)
+
+ * Remove connection settings logging (#42) (Quentin Presley)
+
+
 2017-03-31, Version 2.0.0
 =========================
 
