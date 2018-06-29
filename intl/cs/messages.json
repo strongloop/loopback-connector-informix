@@ -1,0 +1,15 @@
+{
+  "0cc360c963609b7c4ecf0b82d02a4fff": "Parametr {{addPropertyToActual()}} není aktuálně podporován.",
+  "130848fb8a2410bbb210d1e4b215b9f0": "Parametr {{showFields()}} není aktuálně podporován.",
+  "36c49732b9f58d259812cfb5ec6de895": "Parametr {{searchForPropertyInActual()}} není aktuálně podporován.",
+  "388f95dbd90b33cabc5c2f1c79767662": "Parametr {{propertyHasNotBeenDeleted()}} není aktuálně podporován.",
+  "5ad265d55cba0590648ab6e4082a7ffc": "Zástupný symbol pro identifikátory není podporován: {0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "Parametr {{showIndexes()}} není aktuálně podporován.",
+  "80a32e80cbed65eba2103201a7c94710": "Model nebyl nalezen: {0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "Funkce {{setDefaultOptions}} není podporována",
+  "85bdbbfb1bb3e7546e7731eebf414b89": "Počet číslic za desetinnou čárkou (Scale) bez celkového počtu číslic (Precision) nedává smysl",
+  "9fe8bf7bb0666019398fc51ea7918791": "Funkce {{setNullableProperty}} není podporována",
+  "a4eb9d2c3bac1b4f7adff30970ee26cc": "volby musí být objektem: {0}",
+  "baa04cd08950779fd7a771e9b3bfc36d": "Parametr {{applySqlChanges()}} není aktuálně podporován."
+}
+
