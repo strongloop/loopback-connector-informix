@@ -1,0 +1,15 @@
+{
+  "0cc360c963609b7c4ecf0b82d02a4fff": "Metoda {{addPropertyToActual()}} nie jest obecnie obsługiwana.",
+  "130848fb8a2410bbb210d1e4b215b9f0": "Metoda {{showFields()}} nie jest obecnie obsługiwana.",
+  "36c49732b9f58d259812cfb5ec6de895": "Metoda {{searchForPropertyInActual()}} nie jest obecnie obsługiwana.",
+  "388f95dbd90b33cabc5c2f1c79767662": "Metoda {{propertyHasNotBeenDeleted()}} nie jest obecnie obsługiwana.",
+  "5ad265d55cba0590648ab6e4082a7ffc": "Obiekt zastępczy dla identyfikatorów nie jest obsługiwany: {0}",
+  "5bd4357e0ae920069a47377e8d1fbe1c": "Metoda {{showIndexes()}} nie jest obecnie obsługiwana.",
+  "80a32e80cbed65eba2103201a7c94710": "Nie znaleziono modelu: {0}",
+  "85a1de9aa1df6f285abcabd10bf1e787": "Funkcja {{setDefaultOptions}} nie jest obsługiwana",
+  "85bdbbfb1bb3e7546e7731eebf414b89": "Skala bez precyzji nie ma sensu",
+  "9fe8bf7bb0666019398fc51ea7918791": "Funkcja {{setNullableProperty}} nie jest obsługiwana",
+  "a4eb9d2c3bac1b4f7adff30970ee26cc": "Właściwość options musi być obiektem: {0}",
+  "baa04cd08950779fd7a771e9b3bfc36d": "Metoda {{applySqlChanges()}} nie jest obecnie obsługiwana."
+}
+
