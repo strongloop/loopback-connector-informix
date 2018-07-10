@@ -64,7 +64,7 @@ describe.skip('discoverModels', function() {
             } else {
               models.forEach(function(m) {
                 assert.equal(m.owner.toUpperCase(),
-                             config.username.toUpperCase());
+                  config.username.toUpperCase());
               });
               done(null, models);
             }
@@ -243,16 +243,16 @@ describe.skip('Discover and build models', function() {
   it('should discover and build models',
     function(done) {
       db.discoverAndBuildModels('INVENTORY',
-                                {owner: config.schema,
-                                 visited: {},
-                                 associations: true},
+        {owner: config.schema,
+          visited: {},
+          associations: true},
         function(err, models) {
           if (err) {
             done();
           }
 
           assert(models.Inventory,
-                 'Inventory model should be discovered and built');
+            'Inventory model should be discovered and built');
           var schema = models.Inventory.definition;
           assert(schema.settings.informix.schema === config.schema);
           assert(schema.settings.informix.table === 'INVENTORY');
