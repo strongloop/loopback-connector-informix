@@ -1,3 +1,21 @@
+2018-07-17, Version 2.2.0
+=========================
+
+ * chore: update dependencies (Diana Lau)
+
+ * [WebFM] cs/pl/ru translation (candytangnb)
+
+ * Update LICENSE (Diana Lau)
+
+ * Add stalebot configuration (Kevin Delisle)
+
+ * Create Issue and PR Templates (#50) (Sakib Hasan)
+
+ * update messages.json (Diana Lau)
+
+ * Add CODEOWNER file (Diana Lau)
+
+
 2017-06-22, Version 2.1.0
 =========================
 
