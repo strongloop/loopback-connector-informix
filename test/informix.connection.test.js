@@ -1,5 +1,5 @@
-// Copyright IBM Corp. 2016. All Rights Reserved.
-// Node module: loopback-connector-db2
+// Copyright IBM Corp. 2017. All Rights Reserved.
+// Node module: loopback-connector-informix
 // This file is licensed under the Artistic License 2.0.
 // License text available at https://opensource.org/licenses/Artistic-2.0
 

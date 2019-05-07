@@ -44,5 +44,6 @@
   "bugs": {
     "url": "https://github.com/strongloop/loopback-connector-informix/issues"
   },
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "IBM Corp."
 }
