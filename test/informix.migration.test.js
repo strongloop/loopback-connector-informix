@@ -23,14 +23,14 @@ describe('migrations', function() {
 
     UserData = db.define('UserData', {
       email: {type: String, null: false, index: true,
-        informix: {columnName: 'EMAIL', dataType: 'VARCHAR',
+        informix: {columnName: 'E_MAIL', dataType: 'VARCHAR',
           dataLength: 255, nullable: true}},
       name: String,
       bio: Schema.Text,
       birthDate: Date,
       pendingPeriod: Number,
       createdByAdmin: Boolean},
-    {indexes: {index0: {columns: 'email,createdByAdmin'}}}
+    {indexes: {index0: {columns: 'E_MAIL,createdByAdmin'}}}
     );
 
     NumberData = db.define('NumberData', {
