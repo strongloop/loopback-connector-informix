@@ -23,7 +23,7 @@ describe('migrations', function() {
 
     UserData = db.define('UserData', {
       email: {type: String, null: false, index: true,
-        informix: {columnName: 'email', dataType: 'VARCHAR',
+        informix: {columnName: 'EMAIL', dataType: 'VARCHAR',
           dataLength: 255, nullable: true}},
       name: String,
       bio: Schema.Text,
