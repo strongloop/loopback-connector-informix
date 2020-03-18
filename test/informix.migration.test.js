@@ -64,7 +64,7 @@ describe('migrations', function() {
             colno: 1,
             datalength: 255,
             datatype: 296,
-            name: 'email',
+            name: 'E_MAIL',
           },
           {
             colno: 2,
